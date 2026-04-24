@@ -1,8 +1,11 @@
 <?php
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\Livewire\Settings\Profile;
 use App\Models\User;
 use Livewire\Livewire;
+
+uses(RefreshDatabase::class);
 
 test('profile page is displayed', function () {
     $this->actingAs($user = User::factory()->create());
